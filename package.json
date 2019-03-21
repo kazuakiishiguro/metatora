@@ -1,0 +1,27 @@
+{
+  "name": "metatora",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "migrate": "npx truffle migrate",
+    "test" : "npx truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazuakiishiguro/metatora.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kazuakiishiguro/metatora/issues"
+  },
+  "homepage": "https://github.com/kazuakiishiguro/metatora#readme",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.2.0",
+    "truffle": "^5.0.8"
+  }
+}
