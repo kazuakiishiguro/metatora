@@ -26,6 +26,10 @@ contract MetaTora is ERC20, ERC20Detailed {
         address from = recover(hashedTx, _signature);
         require(from != address(0));
 
+        _transfer(from, _to, _value);
+        _transfer(from, msg.sender, _fee);
+        signatures[_signature] = true;
+
         return true;
     }
 
@@ -38,10 +42,6 @@ contract MetaTora is ERC20, ERC20Detailed {
     ) public pure returns (bytes32) {
         return keccak256(abi.encodePacked(bytes4(0x48664c16), _token, _to, _value, _fee, _nonce));
     }
-
-    // function _prefix(bytes32 _hash) internal pure returns (bytes32) {
-    //     return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", _hash));
-    // }
 
     function recover(
         bytes32 hash,
