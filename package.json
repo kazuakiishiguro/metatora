@@ -7,6 +7,8 @@
     "test": "test"
   },
   "scripts": {
+    "watch": "webpack --config ./webpack.config.watch.js",
+    "build": "webpack --config ./webpack.config.build.js",
     "migrate": "npx truffle migrate",
     "test": "npx truffle test"
   },
@@ -23,5 +25,22 @@
   "dependencies": {
     "openzeppelin-solidity": "^2.2.0",
     "truffle": "^5.0.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/polyfill": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.2",
+    "web3": "^1.0.0-beta.33",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
   }
 }
