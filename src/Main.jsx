@@ -1,7 +1,20 @@
 import React from "react";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 
 export default class Main extends React.Component {
   render() {
-    return <div>Metatora</div>
+    return (
+      <div>
+        <AppBar>
+          <Toolbar>
+            <Typography>
+              Metatora
+            </Typography>
+          </Toolbar>
+        </AppBar>
+      </div>
+    )
   }
 }
